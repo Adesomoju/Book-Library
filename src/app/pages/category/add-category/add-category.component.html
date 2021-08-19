@@ -1,0 +1,26 @@
+<section>
+    <div class="space-between">
+        <p class="modal-tilte">Please Add a new book Category</p>
+        <p (click)="modalResponse()" class="pointer close">Close</p>
+    </div>
+    <form [formGroup]="addCatForm">
+        <div class="d-col mrb-15">
+            <label class="mrb-5 label-text">Enter Category Name</label>
+            <input class="input-text" type="text" formControlName="name" name="" id="">
+        </div>
+        <div class="mrb-15">
+            <div class="mrb-5 label-text">Is it your Favourite ?</div>
+            <div>
+                <div class="mrb-5">
+                    <input class="mrR-5" type="radio" id="Choice1" formControlName="isFavorite" value="true">
+                    <label for="Choice1">Yes</label>
+                </div>
+                <div>
+                    <input class="mrR-5" type="radio" id="Choice2" formControlName="isFavorite" value="false">
+                    <label for="Choice2">No</label>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="butn" [disabled]="addCatForm?.invalid" (click)="addCategory()">Submit</button>
+    </form>
+</section>

@@ -1,0 +1,13 @@
+<section>
+        <div class="space-between">
+            <p class="modal-tilte">{{data?.heading}}</p>
+            <p (click)="modalResponse()" class="pointer close">Close</p>
+        </div>
+        <div>
+            <div class="d-col mrb-15">
+                <label class="mrb-5 label-text">Enter New Name</label>
+                <input class="input-text" type="text" [(ngModel)]="name">
+            </div>
+            <button type="button" class="butn" [disabled]="" (click)="modalResponse(1, name)">{{data?.btn1}}</button>
+        </div>
+    </section>

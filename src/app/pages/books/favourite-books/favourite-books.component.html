@@ -1,0 +1,19 @@
+<section class="parent">
+    <div>
+        <img (click)="back()" class="pointer arrow-back" src="../../../../assets/images/back.svg" alt="" srcset="">
+    </div>
+    <div class="list-box">
+        <p class="list-title">Here are your List of Favourite Books</p>
+        <ng-container *ngIf="!isLoading">
+            <ngx-skeleton-loader class="mt-10" count="7" [theme]="{height: '50px'}" appearance="line"></ngx-skeleton-loader>
+        </ng-container>
+
+        <ng-container *ngIf="isLoading">
+            <div *ngFor="let book of books">
+                <div *ngIf="book.isFvorite === true" class="book-list">
+                    <div class="list-text"> {{book.name}}</div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</section>

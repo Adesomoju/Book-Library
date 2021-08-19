@@ -1,0 +1,26 @@
+<section>
+    <div class="space-between">
+        <p class="modal-tilte">{{data?.heading}}</p>
+        <p (click)="modalResponse()" class="pointer close">Close</p>
+    </div>
+    <div>
+        <div class="d-col mrb-15">
+            <label class="mrb-5 label-text">Enter New Name</label>
+            <input class="input-text" type="text" [(ngModel)]="name">
+        </div>
+        <div class="mrb-15">
+            <div class="mrb-5 label-text">Is it your Favourite ?</div>
+            <div>
+                <div class="mrb-5">
+                    <input class="mrR-5" type="radio" id="Choice1" [(ngModel)]="fav" value="true">
+                    <label for="Choice1">Yes</label>
+                </div>
+                <div>
+                    <input class="mrR-5" type="radio" id="Choice2" [(ngModel)]="fav" value="false">
+                    <label for="Choice2">No</label>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="butn" [disabled]="" (click)="modalResponse(2, name, fav)">{{data?.btn1}}</button>
+    </div>
+</section>

@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.pointer{
+    cursor: pointer;
+}
+.trash-con{
+    color: #E12121;
+}
+.edit-con{
+    color: #171C68;
+}
+.space-between{
+    display: flex;
+    justify-content: space-between;
+}
+.space-even{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.d-col{
+    display: flex;
+    flex-direction: column;
+}
+
+.mrb-15{
+    margin-bottom: 15px;
+}
+
+.mrb-10{
+    margin-bottom: 10px;
+}
+
+.mrb-5{
+    margin-bottom: 5px;
+}
+.mrR-5{
+    margin-right: 5px;
+}
+
+.arrow-back{
+    width: 50px;
+    position: absolute;
+    top: 3.5%;
+    left: 9%;
+}

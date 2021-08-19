@@ -1,0 +1,53 @@
+.parent{
+  height: 100%;
+  background: #FFF;
+  position: absolute;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.home-text{
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: center;
+    color: #001E6C;
+    margin-top: 10%;
+    line-height: 1;
+}
+
+.home-subtext{
+    font-size: 24px;
+    color: #E17600;
+    text-align: center;
+    margin-top: 40px;
+    line-height: 1;
+}
+
+.butn-group{
+    justify-content: center;
+    display: flex;
+    margin-top: 80px;
+    .butn{
+        font-size: 19px;
+        color: #fff;
+        padding: 13px 18px;
+        border-radius: 8px;
+        border: 0px;
+        margin: 10px;
+        background: #2C3891;
+        box-shadow: 0px 2px 4px rgba(44, 56, 145, 0.37);
+        border-radius: 4px;
+    }
+    .butn:hover{
+        font-size: 20px;
+        color: #E17600;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .butn-group{
+        flex-direction: column
+    }
+}
+

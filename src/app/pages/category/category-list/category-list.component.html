@@ -1,0 +1,26 @@
+<section class="parent">
+    <div>
+        <img (click)="back()" class="pointer arrow-back" src="../../../../assets/images/back.svg" alt="" srcset="">
+    </div>
+    <div class="list-box">
+        <p class="list-title">List of Books Category</p>
+        <ng-container *ngIf="!isLoading">
+            <ngx-skeleton-loader class="mt-10" count="7" [theme]="{height: '50px'}" appearance="line"></ngx-skeleton-loader>
+        </ng-container>
+
+        <ng-container *ngIf="isLoading">
+            <div *ngFor="let category of categories">
+                <div class="book-list">
+                    <div class="list-text">{{category.id}}. {{category.name}}</div>
+                    <div class="split-Icon">
+                        <mat-icon class="edit-con pointer" (click)="editCat(category)">create</mat-icon>
+                        <mat-icon class="trash-con pointer shift-20" (click)="deleteCat(category)">delete_outline</mat-icon>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <div>
+        <mat-icon class="addicon" (click)="addNewCat()">add_circle</mat-icon>
+    </div>
+</section>

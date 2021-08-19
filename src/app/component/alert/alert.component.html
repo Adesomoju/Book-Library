@@ -1,0 +1,17 @@
+<div>
+    <mat-dialog-content class="">
+        <div class="">
+            <div class=" text-center mrb-15">
+                <span class="alt-text">{{data?.message}}</span>
+            </div>
+            <div class="space-even">
+                <div class="" *ngIf="data?.btn1">
+                    <button class="butn" (click)="modalResponse(1)">{{data?.btn1}}</button>
+                </div>
+                <div class="" *ngIf="data?.btn2">
+                    <button class="butn" (click)="modalResponse(2)">{{data?.btn2}}</button>
+                </div>
+            </div>
+        </div>
+    </mat-dialog-content>
+</div>
